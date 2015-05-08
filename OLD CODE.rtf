@@ -1,0 +1,184 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs28 \cf0 \CocoaLigature0 VIEW CONTROLLER
+\fs22 \cf2 \
+\
+/*- (void)pinchGesture:(UIPinchGestureRecognizer *)sender \{\
+    \
+    if([sender state] == UIGestureRecognizerStateBegan) \{\
+        // Reset the last scale, necessary if there are multiple objects with different scales\
+        lastScale = [sender scale];\
+    \}\
+    \
+    if ([sender state] == UIGestureRecognizerStateBegan ||\
+        [sender state] == UIGestureRecognizerStateChanged) \{\
+        \
+        CGFloat currentScale = [[[sender view].layer valueForKeyPath:@"transform.scale"] floatValue];\
+        \
+        // Constants to adjust the max/min values of zoom\
+        const CGFloat kMaxScale = 2.0;\
+        const CGFloat kMinScale = 1.0;\
+        \
+        CGFloat newScale = 1 -  (lastScale - [sender scale]);\
+        newScale = MIN(newScale, kMaxScale / currentScale);\
+        newScale = MAX(newScale, kMinScale / currentScale);\
+        CGAffineTransform transform = CGAffineTransformScale([[sender view] transform], newScale, newScale);\
+        [sender view].transform = transform;\
+        \
+        lastScale = [sender scale];  // Store the previous scale factor for the next pinch gesture call\
+    \}\
+\}\
+\
+- (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender\
+\{\
+    static CGPoint center;\
+    static CGSize initialSize;\
+    \
+    if (sender.state == UIGestureRecognizerStateBegan)\
+    \{\
+        center = sender.view.center;\
+        initialSize = sender.view.frame.size;\
+    \}\
+    \
+    // scale the image\
+    sender.view.frame = CGRectMake(0,\
+                                   0,\
+                                   initialSize.width * sender.scale,\
+                                   initialSize.height * sender.scale);\
+    // recenter it with the new dimensions\
+    sender.view.center = center;\
+    \
+    if (sender.state == UIGestureRecognizerStateEnded)\
+    \{\
+        NSLog(@"pinchEnded");\
+        senderScale = sender.scale;\
+    \}\
+\}\
+\
+\
+- (IBAction)rotateGesture:(UIRotationGestureRecognizer *)sender\
+\{\
+    \
+    static CGFloat initialRotation;\
+    if (sender.state == UIGestureRecognizerStateBegan)\
+    \{\
+        initialRotation = atan2f(sender.view.transform.b, sender.view.transform.a);\
+    \}\
+    CGFloat newRotation = initialRotation + sender.rotation;\
+    sender.view.transform = CGAffineTransformMakeRotation(newRotation);\
+    \
+    if (sender.state == UIGestureRecognizerStateEnded)\
+    \{\
+        NSLog(@"rotateEnded");\
+    \}\
+\}\
+\
+\
+- (IBAction)panGesture:(UIPanGestureRecognizer *)sender\
+\{\
+    static CGPoint initialCenter;\
+    if (sender.state == UIGestureRecognizerStateBegan)\
+    \{\
+        initialCenter = sender.view.center;\
+    \}\
+    CGPoint translation = [sender translationInView:sender.view.superview];\
+    sender.view.center = CGPointMake(initialCenter.x + translation.x,\
+                                     initialCenter.y + translation.y);\
+    if (sender.state == UIGestureRecognizerStateEnded)\
+    \{\
+        float senderWidth = sender.view.frame.size.width;\
+        float senderHeight = sender.view.frame.size.height;\
+        \
+        NSLog(@"equation is %f", ((senderWidth - 300)/2)+10);\
+        NSLog(@"width is %f", senderWidth);\
+        NSLog(@"position is %f", sender.view.frame.origin.x);\
+        if (sender.view.frame.origin.x > 10)\{\
+            NSLog(@"equation is %f", ((senderWidth - 300)/2)+10);\
+            sender.view.transform = CGAffineTransformMakeTranslation (0,0);\
+            float newPoint = sender.view.frame.origin.x;\
+            sender.view.transform = CGAffineTransformMakeTranslation (-newPoint, 0);\
+        \}\
+    \}\
+\}\
+\
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer \{\
+    \
+	return ![gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]];\
+\} */\
+\
+/*UIImage *imageSmall = rotatedImage;\
+    if ([[UIDevice currentDevice] systemVersion].floatValue < 7.0)\{\
+    if([[UIScreen mainScreen] bounds].size.height == 568)\
+    \{\
+        // iPhone 5 V 6.0\
+        img = [self cropImage:imageSmall andFrame:CGRectMake(48, 190, 543, 543)];\
+    \}\
+    else\
+    \{\
+        img = [self cropImage:imageSmall andFrame:CGRectMake(18, 110, 600, 600)];\
+    \}\
+    \}else\{\
+        if([[UIScreen mainScreen] bounds].size.height == 568)\
+        \{\
+            // iPhone 5 V 7.0\
+            img = [self cropImage:imageSmall andFrame:CGRectMake(20, 212, 600, 600)];\
+        \}\
+        else\
+        \{\
+            img = [self cropImage:imageSmall andFrame:CGRectMake(50, 109, 543, 543)];\
+        \}\
+    \}*/\
+\
+\cf0  \cf2 /* [bottomBlendView setImage:img];\
+    [topBlendView setImage:newImage.image];\
+    [topBlendView setAlpha:1.0 - slider.value];\
+    [bottomBlendView addSubview:topView]; */\
+\
+/*-(void)scale:(id)sender \{\
+	[self.view bringSubviewToFront:[(UIPinchGestureRecognizer*)sender view]];\
+	if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateEnded) \{\
+        \
+		lastScale = 1.0;\
+		return;\
+	\}\
+	CGFloat scale = 1.0 - (lastScale - [(UIPinchGestureRecognizer*)sender scale]);\
+	CGAffineTransform currentTransform = [(UIPinchGestureRecognizer*)sender view].transform;\
+	CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);\
+    \
+	[[(UIPinchGestureRecognizer*)sender view] setTransform:newTransform];\
+    \
+	lastScale = [(UIPinchGestureRecognizer*)sender scale];\
+\}*/\
+\
+/*if ([[UIDevice currentDevice] systemVersion].floatValue < 7.0)\{\
+        if([[UIScreen mainScreen] bounds].size.height == 568) // iPhone 5 V 6.0\
+        \{\
+            NSLog(@"iPhone 5 Version 6.0");\
+            previewImage = [[UIImageView alloc]initWithFrame:CGRectMake(-54, 0, 428, 568)];\
+        \}else\{\
+            NSLog(@"iPhone 4 Version 6.0");\
+            previewImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 425)];\
+        \}\
+    \}else\{\
+        if([[UIScreen mainScreen] bounds].size.height == 568) // iPhone 5 V 7.0\
+        \{\
+            NSLog(@"iPhone 5 Version 7.0");\
+            previewImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 425)];\
+        \}else\{\
+            previewImage = [[UIImageView alloc]initWithFrame:CGRectMake(-20, 0, 361, 480)];\
+            NSLog(@"iPhone 4 Version 7.0");\
+        \}\
+    \}*/\cf0 \
+    \cf2 //[previewImage setContentMode:UIViewContentModeScaleAspectFit];\cf0 \
+    \cf2 //pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGesture:)];\cf0 \
+    \cf2 //rotation = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateGesture:)];\cf0 \
+    \cf2 //pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];\cf0 \
+    \cf2 //[previewImage addGestureRecognizer:pinch];\cf0 \
+   \cf2 // [previewImage addGestureRecognizer:rotation];\cf0 \
+   \cf2 // [previewImage addGestureRecognizer:pan];\cf0 \
+    \cf2 //[previewImage setUserInteractionEnabled:YES];}

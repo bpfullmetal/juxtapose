@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewProject">
+            <connections>
+                <outlet property="addAnother" destination="QLM-DC-0g1" id="yaL-V8-Gq8"/>
+                <outlet property="arrow" destination="tvj-PU-mqR" id="DVl-DM-oll"/>
+                <outlet property="blendBackToNormal" destination="i2M-lZ-4ak" id="07T-qm-A8i"/>
+                <outlet property="blendColor" destination="zbn-Nr-ivf" id="GD3-uf-qno"/>
+                <outlet property="blendColorBurn" destination="Nj6-5c-7lM" id="cE9-su-7TM"/>
+                <outlet property="blendColorDodge" destination="hLw-ew-beb" id="u0s-qC-xQe"/>
+                <outlet property="blendContainer" destination="sqe-IK-OHm" id="bOw-eP-ETF"/>
+                <outlet property="blendDarker" destination="zWk-Hb-87K" id="Hwd-7d-7gf"/>
+                <outlet property="blendDifference" destination="qF0-RH-jYM" id="ZKt-aR-93t"/>
+                <outlet property="blendExclusion" destination="oZD-OQ-kFt" id="fYq-vw-V3H"/>
+                <outlet property="blendHardlight" destination="38r-vO-3gU" id="2iO-LD-rfN"/>
+                <outlet property="blendHue" destination="RID-Wz-Pt2" id="bCX-gG-pcD"/>
+                <outlet property="blendLighter" destination="blW-WZ-HPy" id="WWj-Fz-WA8"/>
+                <outlet property="blendLuminosity" destination="wWZ-Sh-kwh" id="hCR-WM-hml"/>
+                <outlet property="blendMultiply" destination="6Ex-nG-Nr7" id="z7t-SI-REz"/>
+                <outlet property="blendOverlay" destination="NEJ-p6-WFa" id="lhk-Bw-Nks"/>
+                <outlet property="blendSaturation" destination="m6I-dB-v0X" id="gCZ-4E-Pqk"/>
+                <outlet property="blendScreen" destination="x2a-EU-eIc" id="48t-yM-dPW"/>
+                <outlet property="blendScroll" destination="aKN-r2-tFl" id="ePh-fn-7eG"/>
+                <outlet property="blendScrollView" destination="YMj-4n-qyP" id="3bM-kF-LoT"/>
+                <outlet property="blendSoftLight" destination="OHH-TY-zm9" id="VeE-En-ijY"/>
+                <outlet property="blendedImage" destination="n3r-QU-hXP" id="bX6-oc-IqA"/>
+                <outlet property="buttonUnderline" destination="QEF-xd-6qq" id="b1K-lF-mMh"/>
+                <outlet property="chooseBlend" destination="QIV-Hd-g6z" id="KnD-M5-3oW"/>
+                <outlet property="clickBlink" destination="ZgJ-GB-Qud" id="3E6-mP-V2I"/>
+                <outlet property="imageHolders" destination="eM5-8H-SWe" id="Mp7-6O-6eW"/>
+                <outlet property="imageSet" destination="wcU-ih-C0I" id="N97-HJ-EOv"/>
+                <outlet property="lastImage" destination="i0j-Qi-usD" id="F4s-8C-DW6"/>
+                <outlet property="saveBlended" destination="yaC-LR-u94" id="rBR-3I-uYf"/>
+                <outlet property="saveCover" destination="YAT-R1-kzc" id="CoJ-OM-Znd"/>
+                <outlet property="saveIt" destination="jTf-EJ-3hx" id="0qz-vY-qeQ"/>
+                <outlet property="view" destination="o58-53-bi0" id="6fQ-OC-buQ"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="o58-53-bi0">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="eM5-8H-SWe">
+                    <rect key="frame" x="10" y="65" width="300" height="299"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wcU-ih-C0I">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="i0j-Qi-usD">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c4L-Uo-IjO">
+                    <rect key="frame" x="234" y="407" width="57" height="57"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="save.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveJXTP" destination="-1" eventType="touchUpInside" id="eUv-hn-T3H"/>
+                    </connections>
+                </button>
+                <view alpha="0.80000001192092896" contentMode="scaleToFill" id="YAT-R1-kzc">
+                    <rect key="frame" x="234" y="407" width="57" height="57"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="Bmo-3P-QOD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" id="JGc-7r-qX9">
+                    <rect key="frame" x="0.0" y="21" width="320" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="counter.png" id="bqy-mf-sKg">
+                    <rect key="frame" x="0.0" y="50" width="320" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="6D3-aX-yhO">
+                    <rect key="frame" x="29" y="407" width="57" height="57"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="quit.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="quit" destination="-1" eventType="touchUpInside" id="aa6-kA-o67"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" id="ZgJ-GB-Qud">
+                    <rect key="frame" x="112" y="393" width="96" height="79"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I4O-wD-bYN">
+                            <rect key="frame" x="0.0" y="0.0" width="96" height="79"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="addPhoto.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="addANewPhoto:" destination="-1" eventType="touchUpInside" id="zaS-Xu-oa8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="sqe-IK-OHm">
+                    <rect key="frame" x="0.0" y="480" width="320" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="aKN-r2-tFl">
+                            <rect key="frame" x="0.0" y="80" width="320" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </scrollView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" id="tvj-PU-mqR">
+                            <rect key="frame" x="300" y="80" width="20" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="ynP-fZ-kX0">
+                            <rect key="frame" x="29" y="15" width="57" height="57"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="cancel.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBlendMode" destination="-1" eventType="touchUpInside" id="SMj-mE-XZe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uXW-DU-oah">
+                            <rect key="frame" x="234" y="15" width="57" height="57"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="save.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="blendIt" destination="-1" eventType="touchUpInside" id="tlz-0C-1UW"/>
+                            </connections>
+                        </button>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chooseBlend.png" id="QIV-Hd-g6z">
+                            <rect key="frame" x="98" y="49" width="124" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="n3r-QU-hXP">
+                    <rect key="frame" x="10" y="65" width="300" height="300"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saveBlended.png" id="yaC-LR-u94">
+                    <rect key="frame" x="230" y="373" width="64" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="QLM-DC-0g1">
+                    <rect key="frame" x="58" y="354" width="144" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="addAnother.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="ifClicked" destination="-1" eventType="touchUpInside" id="RDH-HK-z3P"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="saveit.png" id="jTf-EJ-3hx">
+                    <rect key="frame" x="200" y="352" width="105" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YMj-4n-qyP">
+            <rect key="frame" x="0.0" y="0.0" width="969" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Ex-nG-Nr7">
+                    <rect key="frame" x="73" y="5" width="43" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendMultiply.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendMultiply" destination="-1" eventType="touchUpInside" id="oEf-NA-jwB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nj6-5c-7lM">
+                    <rect key="frame" x="140" y="5" width="28" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendBurn.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendColorBurn" destination="-1" eventType="touchUpInside" id="lo2-FL-G6Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i2M-lZ-4ak">
+                    <rect key="frame" x="16" y="5" width="37" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="blendNormal.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendBackToNormal" destination="-1" eventType="touchUpInside" id="9BR-SO-9kh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zWk-Hb-87K">
+                    <rect key="frame" x="196" y="5" width="36" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="blendDarken.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendDarker" destination="-1" eventType="touchUpInside" id="d6q-T0-QoD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qF0-RH-jYM">
+                    <rect key="frame" x="317" y="5" width="34" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendInvert.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendDifference" destination="-1" eventType="touchUpInside" id="zQ7-eP-hZF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oZD-OQ-kFt">
+                    <rect key="frame" x="373" y="5" width="42" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendExclude.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendExclusion" destination="-1" eventType="touchUpInside" id="4kV-0j-mrw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NEJ-p6-WFa">
+                    <rect key="frame" x="434" y="5" width="40" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendOverlay.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendOverlay" destination="-1" eventType="touchUpInside" id="OdV-dy-fPl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x2a-EU-eIc">
+                    <rect key="frame" x="496" y="5" width="36" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendScreen.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendScreen" destination="-1" eventType="touchUpInside" id="OUW-9Y-AK1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="blW-WZ-HPy">
+                    <rect key="frame" x="255" y="5" width="38" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendLighten.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendLighter" destination="-1" eventType="touchUpInside" id="kKM-ml-XWa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="38r-vO-3gU">
+                    <rect key="frame" x="559" y="5" width="31" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendSharp.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendHardlight" destination="-1" eventType="touchUpInside" id="RZy-CV-DCX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hLw-ew-beb">
+                    <rect key="frame" x="679" y="5" width="31" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendEmber.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendColorDodge" destination="-1" eventType="touchUpInside" id="jIE-iE-KHG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m6I-dB-v0X">
+                    <rect key="frame" x="620" y="5" width="29" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendSteep.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendSaturation" destination="-1" eventType="touchUpInside" id="k2m-OF-THL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wWZ-Sh-kwh">
+                    <rect key="frame" x="739" y="5" width="30" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" backgroundImage="blendGleam.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendLuminosity" destination="-1" eventType="touchUpInside" id="42q-fM-8xV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OHH-TY-zm9">
+                    <rect key="frame" x="800" y="5" width="29" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendDown.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendSoftLight" destination="-1" eventType="touchUpInside" id="Oci-yQ-Dsc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zbn-Nr-ivf">
+                    <rect key="frame" x="919" y="5" width="30" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendColor.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendColor" destination="-1" eventType="touchUpInside" id="6vR-K0-35I"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RID-Wz-Pt2">
+                    <rect key="frame" x="860" y="5" width="29" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="blendHue.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blendHue" destination="-1" eventType="touchUpInside" id="QK0-nX-ka2"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" id="QEF-xd-6qq">
+                    <rect key="frame" x="24" y="44" width="20" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addAnother.png" width="285" height="77"/>
+        <image name="addPhoto.png" width="193" height="159"/>
+        <image name="arrow.png" width="40" height="100"/>
+        <image name="blendBurn.png" width="57" height="73"/>
+        <image name="blendColor.png" width="59" height="73"/>
+        <image name="blendDarken.png" width="72" height="72"/>
+        <image name="blendDown.png" width="57" height="73"/>
+        <image name="blendEmber.png" width="62" height="72"/>
+        <image name="blendExclude.png" width="81" height="73"/>
+        <image name="blendGleam.png" width="60" height="73"/>
+        <image name="blendHue.png" width="57" height="73"/>
+        <image name="blendInvert.png" width="67" height="72"/>
+        <image name="blendLighten.png" width="76" height="73"/>
+        <image name="blendMultiply.png" width="86" height="73"/>
+        <image name="blendNormal.png" width="77" height="73"/>
+        <image name="blendOverlay.png" width="80" height="73"/>
+        <image name="blendScreen.png" width="72" height="73"/>
+        <image name="blendSharp.png" width="61" height="73"/>
+        <image name="blendSteep.png" width="57" height="73"/>
+        <image name="cancel.png" width="113" height="113"/>
+        <image name="chooseBlend.png" width="288" height="60"/>
+        <image name="counter.png" width="640" height="9"/>
+        <image name="logo.png" width="640" height="58"/>
+        <image name="quit.png" width="113" height="113"/>
+        <image name="save.png" width="113" height="113"/>
+        <image name="saveBlended.png" width="128" height="68"/>
+        <image name="saveit.png" width="189" height="88"/>
+    </resources>
+</document>
